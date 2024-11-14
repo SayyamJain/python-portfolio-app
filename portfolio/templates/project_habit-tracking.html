@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        Hi, I'm Sayyam! I love to code and master software development.
+                        I'm a Software Development Engineer with over 3 years of experience in programming, 
+                        testing, research and documentation of applications and understanding of agile project. 
+                        Able to learn new technologies and tools quickly and capable of adopting them as well.
+                    </p>
+                    <p>
+                        Coding is extremely rewarding. As you learn, things start to click and make sense.
+                        You can join the dots of all the things that weren't quite clear before.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
